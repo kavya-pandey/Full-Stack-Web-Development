@@ -1,0 +1,54 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/Form_Assig2/backgroundimg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+label {
+  color: white;
+  margin-left: 10px;
+  width: 240px;
+  display: inline-block;
+}
+input {
+  padding: 10px;
+}
+#landmark,
+#state {
+  margin-left: 254px;
+}
+
+button {
+  background-color: #609bdd;
+  border: none;
+  color: white;
+  padding: 15px 155px;
+  margin-left: 255px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#gender,
+#country {
+  border-radius: 15px;
+  padding: 4px;
+  width: 365px;
+}
+#date,
+#month,
+#year {
+  border-radius: 15px;
+  padding: 4px;
+  width: 120px;
+}
+#phoneNo,
+#mail {
+  width: 342px;
+}
