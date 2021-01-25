@@ -6,17 +6,14 @@
     <meta name ="viewport" content="width=device-width,initial scale=1.0" />
     <title>Form_Table</title>
     <style>
-        body {
-            font-family: sans-serif;
-        }
+        
         table {
            border: 1px solid black;
-            /* width: 500px; */
-            /* height: 250px; */
+           
             border-collapse: collapse;
         }
-        th, td, tr {
-            /* text-align: center; */
+        td, tr {
+           
             border: 1px solid black;
         }
       
@@ -24,7 +21,7 @@
     </style>
     </head>
     <body>
-        <h3 style=" color: white; margin-left: 200px;">Fill the application form below and submit.</h3>
+        <h3>Fill the application form below and submit.</h3>
     <table align="center">
         
        <form id="register" method="post" action="form.php"> 
