@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web Page</title>
+    
+</head>
+
+<body>
+
+
+      
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vitae corporis modi dolor inventore molestias pariatur sint alias, veritatis quod sit dolores! Necessitatibus blanditiis accusamus perferendis sunt neque. Itaque accusamus placeat commodi dignissimos, totam debitis aspernatur reiciendis blanditiis nisi nostrum laudantium repudiandae, mollitia sunt? Fuga, dolorem harum et eius non quisquam! Explicabo placeat perspiciatis consequuntur dignissimos, blanditiis inventore nobis minus adipisci tempore corporis et magni similique accusantium sequi odit consequatur. Velit voluptatem cupiditate delectus, sit facilis dolore, dignissimos cum similique error dolores corporis labore enim dicta. Veritatis quis quam tempore consectetur ex doloribus dolores eos odit quos ullam, earum explicabo sit, voluptatum fugit modi consequuntur dignissimos! Quam iste doloremque corporis ex reiciendis sit error molestias, hic numquam voluptatum fugiat! Consectetur maiores sequi accusamus voluptas, vel rerum dicta. Enim quae dicta architecto nostrum commodi voluptates distinctio ipsum cumque neque ipsa, vitae nihil sit vel eius odit ut quasi dolorum culpa? Quas aperiam debitis reiciendis dolore doloremque. Architecto fugiat quo ut iure, inventore in magnam explicabo quidem incidunt numquam doloribus sunt corrupti soluta minima doloremque, tempora facilis maiores officiis assumenda iste qui unde quod tempore. Dolor voluptatem, ab, pariatur magnam excepturi velit quisquam veniam amet doloremque, consectetur id rerum! Officia doloribus ullam rerum placeat sint porro quas voluptate? Excepturi molestias ducimus deserunt. Ab adipisci, quia ex velit laboriosam maiores minus quae? Asperiores quam sint sit in? Blanditiis, voluptas vero? Excepturi soluta quidem similique ex commodi necessitatibus nam a nesciunt, neque veniam porro dolore! Debitis provident, nemo minima sequi quis tempore possimus expedita explicabo officia esse adipisci consectetur natus vel illum, sint ducimus praesentium porro! Dolor, odit, ex tenetur ipsam sit vitae magni sint eaque eum minima iusto soluta quisquam assumenda nam. Quo soluta, consequatur aspernatur magni quam vero hic harum voluptatum odio quis accusamus possimus itaque temporibus explicabo, officia voluptate molestiae provident nihil! Doloremque nemo modi, dolorem eius officiis iure quaerat! Nesciunt recusandae illo, exercitationem eveniet, non optio ad, deserunt cupiditate perspiciatis error tempore atque. Porro quidem vel unde ea, incidunt necessitatibus exercitationem consequatur eum illum. Quam ea deserunt ipsa optio, quis enim deleniti praesentium quia molestiae, aliquam tempore dignissimos consectetur corrupti neque id, in reiciendis quidem. Libero, reiciendis facilis. Atque deleniti <a href="https://www.w3schools.com/js/DEFAULT.asp">JAVASCRIPT</a> voluptate dolor totam vitae dolore perferendis ducimus quo hic rerum, explicabo repellat laborum error, commodi, <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> doloremque repellendus maxime ullam aliquid doloribus sit quos deserunt aut? Ipsum delectus vero ducimus consectetur mollitia, provident ipsa odio dolor tempore, nam exercitationem accusantium eos ea enim atque sit. Est modi tenetur odio consequuntur ea officia cupiditate fugit suscipit accusamus eius optio ducimus provident, odit pariatur dolor nam temporibus, animi accusantium <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a> alias corrupti ipsam, consequatur maiores. Itaque rem architecto quos fuga nihil, possimus corrupti officiis! Natus est id magni aperiam dolores corporis iste, exercitationem ipsum cupiditate similique ratione delectus saepe iusto quas fugit reprehenderit perspiciatis non. Ab officiis amet modi recusandae ipsum, aut ut nemo exercitationem enim accusamus, totam repellat ullam ad adipisci perspiciatis necessitatibus <a href="www.google.com"> google</a> reprehenderit. Sit voluptatum, ratione mollitia sequi, earum molestiae facere, sunt labore architecto laudantium a porro rerum magni nihil? Placeat, perspiciatis!</p>
+       
+        
+        <button onclick="make_table()">CLICK HERE</button>
+        <script>
+            var x = document.querySelectorAll("a");
+            var myarray = []
+
+            for (var i = 0; i < x.length; i++) {
+                var nametext = x[i].textContent;
+                var cleantext = nametext.replace(/\s+/g, ' ').trim();
+                var cleanlink = x[i].href;
+                myarray.push([cleantext, cleanlink]);
+
+            };
+
+            function make_table() {
+                var table = '<table><thead><th>Name</th><th>Links</th></thead><tbody>';
+                for (var i = 0; i < myarray.length; i++) {
+                    table += '<tr><td>' + myarray[i][0] + '</td><td>' + myarray[i][1] + '</td></tr>';
+                };
+
+                var w = window.open("");
+                w.document.write(table);
+            }
+        </script>
+    
+
+</body>
+
+</html>
