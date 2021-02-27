@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+       
+        .p1 {
+            color: blue;
+        }
+
+        .p2 {
+            color: rgb(255, 0, 43);
+        }
+
+     
+    </style>
+    <title>Document</title>
+    <script>
+
+        function swapText() {
+            element1 = document.getElementsByClassName('p1');
+            element2 = document.getElementsByClassName('p2');
+            x=element1[0].textContent;
+            element1[0].textContent= element2[0].textContent
+            element2[0].textContent=x;
+            
+           
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <p class="p1 ">Welcome to JavaScript</p>
+    <p class="p2">Hello World</p>
+   
+    <button onclick="swapText()">Change</button>
+    
+
+</body>
+
+</html>
