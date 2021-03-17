@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bulb</title>
+</head>
+
+<body>
+    <div align="center">
+        <div><img id="bulboff" height=30% width=30% src="bulboff.jpg"></div>
+        <button onclick="bulbonOff()">
+            <p>ON/OFF</p>
+        </button>
+    </div>
+    <script type="text/javascript">
+        list = ['bulbon.jpg', 'bulboff.jpg'];
+        var count = 0;
+        function bulbonOff() {
+            document.getElementById('bulboff').src = list[count % 2];
+            count++;
+        }
+    </script>
+</body>
+
+</html>
