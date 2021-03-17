@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Shape</title>
+</head>
+
+<body onload="RandomShape();">
+    <div id="first"></div>
+    <div id="second" onclick="RandomShape()"></div>
+    <script>
+        var x = window.innerWidth;
+        var y = window.innerHeight;
+
+        function RandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function RandomShape() {
+            var ele = document.getElementById('second');
+            ele.style.position = "absolute";
+
+
+            function squareShape() {
+                ele.style.width = "50px";
+                ele.style.height = "50px";
+                ele.style.backgroundColor = RandomColor();
+                ele.style.left = Math.round(Math.random() * (x- 50)) ;
+                ele.style.top = Math.round(Math.random() * (y - 50));
+            }
+
+            function RectangleShape() {
+                ele.style.width = "300px";
+                ele.style.height = "250px";
+                ele.style.backgroundColor = RandomColor();
+                ele.style.left = Math.round(Math.random() * (x - 100)) ;
+                ele.style.top = Math.round(Math.random() * (y - 50)) ;
+            }
+
+            function CircleShape() {
+                ele.style.width = "200px";
+                ele.style.height = "200px";
+                ele.style.backgroundColor = RandomColor();
+                ele.style.left = Math.round(Math.random() * (x - 200)) ;
+                ele.style.top = Math.round(Math.random() * (y- 200)) ;
+            }
+
+            var functions = [squareShape, CircleShape, RectangleShape];
+            var min = 1000;
+            var max = 1500;
+            var time = Math.floor(Math.random() * (max - min + 1) + min);
+
+            setTimeout(function () {
+                var index = Math.floor(Math.random() * functions.length);
+                functions[index]();
+            }, time);
+
+            document.getElementById("first").innerHTML = "<h2>" + time + " ms" + "</h2>";
+        }
+    </script>
+</body>
+
+</html>
